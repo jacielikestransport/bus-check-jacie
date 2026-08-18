@@ -39,7 +39,7 @@ jobs:
             if echo "$HTML" | grep -q "$TODAY_DATE" && echo "$HTML" | grep -q "Map" && echo "$HTML" | grep -qE "$ROUTES_PATTERN"; then
               echo "Bus $FLEET_NO is tracking today ($TODAY_DATE)!"
               
-              curl -s -d "Bus $FLEET_NO is live today on bustimes.org! Check: $URL" \
+              curl -s -d "Keighley $FLEET_NO tracking." \
                    -H "Title: Keighley Bus Alert" \
                    "https://ntfy.sh/${NTFY_TOPIC}"
             else
